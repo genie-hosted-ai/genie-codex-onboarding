@@ -1,0 +1,4 @@
+interface:
+  display_name: "Genie Codex Onboarding"
+  short_description: "Guide Codex through Genie signup and worker setup"
+  default_prompt: "Use $genie-codex-onboarding to sign me up for Genie and connect Codex to my worker."

@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+.genie-worker.env
+.env
+.env.*
+!.env.example
