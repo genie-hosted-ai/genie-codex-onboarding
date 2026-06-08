@@ -17,6 +17,7 @@ The skill teaches Codex how to:
 
 - `SKILL.md`: the main skill instructions loaded by Codex when the skill is invoked.
 - `references/flow-checklist.md`: extra checklist for OAuth, checkout, provisioning, worker setup, and recovery cases.
+- `references/worker-api.md`: worker admin API reference for runtime-discovered agentless access.
 - `agents/openai.yaml`: UI metadata for Codex skill lists.
 
 ## Usage
