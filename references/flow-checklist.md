@@ -2,7 +2,7 @@
 
 ## Browser And OAuth
 
-- Use `https://genieclaw.tech` as the canonical public app.
+- Use `https://genieos.net` as the canonical public app.
 - Use embedded browser automation for ordinary clicks, form navigation, and redirects.
 - Use the user for:
   - CAPTCHA or human verification

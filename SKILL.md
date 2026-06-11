@@ -9,7 +9,7 @@ description: Use when guiding a user through Genie signup, checkout, worker prov
 
 Use this skill to drive the end-to-end Genie onboarding flow from the public signup app into a provisioned worker. Codex navigates, waits, reads stable page state, asks the user what data sources they want, and connects agentlessly; the user performs sensitive steps such as account auth, payment, and external OAuth consent.
 
-Use the `browser-use:browser` skill with the `iab` backend for all browser automation. If the user does not provide a signup URL, open `https://genieclaw.tech?genie_onboarding=codex`.
+Use the `browser-use:browser` skill with the `iab` backend for all browser automation. If the user does not provide a signup URL, open `https://genieos.net?genie_onboarding=codex`.
 
 Never embed, assume, share, or persist a worker URL or API key in the skill. Each user gets their own worker URL and API key during onboarding; discover those values only in the active browser session and keep them out of final user-facing text. The Genie app treats a browser as Codex-embedded when the client `User-Agent` header contains `Codex`.
 
@@ -32,7 +32,7 @@ Never embed, assume, share, or persist a worker URL or API key in the skill. Eac
    - If `/subscribe` is visible but the checkout button is missing, disabled, ambiguous, or an error is shown, report the exact visible state instead of guessing.
    - If the browser lands directly on `/dashboard`, continue with the dashboard/provisioning checks below.
 4. After the user completes checkout, keep a browser listener running through the return and worker boot flow:
-   - Watch for `/billing/success`, `/dashboard`, `/provisioning`, `/worker-auth`, or a non-`genieclaw.tech` worker origin. Use `waitForURL` when one target is expected, or a short polling loop over `tab.url()` plus page state when the flow may move through multiple pages.
+   - Watch for `/billing/success`, `/dashboard`, `/provisioning`, `/worker-auth`, or a non-`genieos.net` worker origin. Use `waitForURL` when one target is expected, or a short polling loop over `tab.url()` plus page state when the flow may move through multiple pages.
    - If the browser lands on `/billing/success`, `/dashboard`, or `/provisioning`, continue polling until the page either redirects automatically to `/worker-auth` or the worker URL, or exposes the ready/open-worker controls below.
    - Treat visible provisioning states such as queued, provisioning, waiting for bootstrap, or booting as expected transient states. Keep listening; do not declare failure while the page is still progressing.
    - If the browser redirects through `/worker-auth`, wait for the next navigation into the worker. If it lands on the worker origin, continue with the worker setup checks.

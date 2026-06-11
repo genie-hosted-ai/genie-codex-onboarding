@@ -4,7 +4,7 @@ This repo contains a Codex skill for guiding a user through Genie signup and wor
 
 The skill teaches Codex how to:
 
-- open `https://genieclaw.tech` in the embedded browser
+- open `https://genieos.net` in the embedded browser
 - guide sign-in or signup without collecting passwords or OAuth secrets in chat
 - handle Google OAuth account selection and CAPTCHA handoff safely
 - pause while the user enters Stripe payment information directly in the browser
